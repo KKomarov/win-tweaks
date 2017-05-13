@@ -1,0 +1,51 @@
+﻿Windows Registry Editor Version 5.00
+
+; Dont dimm the display when UAC
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System]
+"PromptOnSecureDesktop"=dword:00000000
+
+; Turn off recent items in start menu
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+"Start_TrackDocs"=dword:00000000
+
+; Fix of language bar
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run]
+"ctfmon.exe"="C:\\Windows\\System32\\ctfmon.exe"
+
+; Stop auto reboot on installed updates
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU]
+"NoAutoRebootWithLoggedOnUsers"=dword:00000001
+
+; Remove 'shortcut' text in link
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer]
+"link"=hex:00,00,00,00
+
+; Skip the Annoying "Use the Web service to find the correct program" Dialog
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer]
+"NoInternetOpenWith"=dword:00000001
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer]
+"NoInternetOpenWith"=dword:00000001
+
+; Show hidden files and extensions
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+"Hidden"=dword:00000001
+"HideFileExt"=dword:00000000
+
+; Change default language at login screen to EN, second to RU
+[HKEY_USERS\.DEFAULT\Keyboard Layout\Preload]
+"1"="00000409"
+"2"="00000419"
+
+; Ctrl + Shift to switch keyboard layout
+[HKEY_CURRENT_USER\Keyboard Layout\Toggle]
+"Language Hotkey"="2"
+"Hotkey"="2"
+"Layout Hotkey"="3"
+
+;Отключить предупреждение при открытии файлов, загруженных из Интернет
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Attachments]
+"SaveZoneInformation"=dword:00000001
+
+; TODO: Disable taskbar thumbnails preview
+
